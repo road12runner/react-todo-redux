@@ -1,1 +1,1 @@
-webpack-dev-server --hot --inline --content-base build/
+webpack-dev-server --hot --inline --content-base public/
