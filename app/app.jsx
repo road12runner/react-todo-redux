@@ -8,7 +8,10 @@ var actions = require('actions');
 var store = require('configureStore').configure();
 var TodoAPI = require('TodoAPI');
 
-import './../playground/firebase/index';
+import initFirebase from './../playground/firebase/index';
+initFirebase();
+
+
 
 // Load foundation
 import 'style!css!foundation-sites/dist/css/foundation.min.css';
@@ -21,8 +24,8 @@ store.subscribe(() => {
   TodoAPI.setTodos(state.todos);
 });
 
-var initialTodos = TodoAPI.getTodos();
-store.dispatch(actions.addTodos(initialTodos));
+var initialTodos1 = TodoAPI.getTodos();
+store.dispatch(actions.addTodos(initialTodos1));
 
 
 
